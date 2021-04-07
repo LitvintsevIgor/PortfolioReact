@@ -1,0 +1,52 @@
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: no-repeat url("./../images/me1.png")  bottom -280px left;
+    background-size: cover;
+}
+
+.main:after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+}
+
+h1 {
+    position: relative;
+    z-index: 1;
+    color: white;
+    font-weight: 300;
+    font-size: 4rem;
+}
+
+ul {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
+    padding: 0;
+    position: relative;
+    z-index: 1;
+}
+
+li {
+    list-style: none;
+}
+
+.iconGit:before {
+    content: url("./../images/icons8-github-24.png");
+}
+.iconFb:before {
+    content: url("./../images/icons8-facebook-f-24.png");
+}
+.iconInst:before {
+    content: url("./../images/icons8-instagram-24.png");
+}
