@@ -28,7 +28,7 @@ h1 {
     font-size: 4rem;
 }
 
-ul {
+.socialLinks ul {
     display: flex;
     width: 200px;
     justify-content: space-between;

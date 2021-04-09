@@ -1,0 +1,50 @@
+.header {
+    /*background-color: #588058;*/
+    width: 100px;
+    position: fixed;
+    height: calc(100vh - 200px);
+    z-index: 1;
+    right: 30px;
+    top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconMenu {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+    list-style: none;
+    /*background-color: #ffe8b5;*/
+
+}
+
+.iconBox {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 20px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iconHome:before {
+    content: url("./../images/icons8-home-24.png");
+}
+
+.iconAbout:before {
+    content: url("./../images/icons8-person-24.png");
+}
+
+.iconPortfolio:before {
+    content: url("./../images/icons8-briefcase-24.png");
+}
+.iconContact:before {
+    content: url("./../images/icons8-important-mail-24.png");
+}
