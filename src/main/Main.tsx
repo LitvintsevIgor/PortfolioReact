@@ -9,15 +9,15 @@ export const Main = () => {
                 <ul>
                     <li>
                         <a href="#">
-                            <i className={style.iconGit}></i>
+                            <i className={style.iconGit}/>
                         </a>
                     </li><li>
                         <a href="#">
-                            <i className={style.iconFb}></i>
+                            <i className={style.iconFb}/>
                         </a>
                     </li><li>
                         <a href="#">
-                            <i className={style.iconInst}></i>
+                            <i className={style.iconInst}/>
                         </a>
                     </li>
                 </ul>
