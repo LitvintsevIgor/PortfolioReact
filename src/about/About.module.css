@@ -9,7 +9,7 @@
     background-color: #1c1c1c;
 }
 
-.about span{
+.about span {
     color: white;
 }
 
@@ -41,7 +41,8 @@
 
 .personalInfo {
     width: 40%;
-    /*background-color: #adffe5;*/
+    background-color: #1c1c1c;
+    z-index: 355463736747;
 }
 
 .dataAboutMe {
@@ -70,4 +71,111 @@
     /*height: 300px;*/
     height: 100%;
 
+}
+
+/*.somediv {*/
+/*    display: flex;*/
+/*    !*justify-content: flex-start;*!*/
+/*    !*background-color: forestgreen;*!*/
+
+/*}*/
+
+.personalInfo a {
+    position: relative;
+    z-index: 4444;
+    overflow: hidden;
+}
+
+.personalInfo a:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -999999990;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    transform: translateX(100%);
+    transition: 1s ease-out all;
+    background-color: white;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.personalInfo a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -999999990;
+    /*width: 100%;*/
+    /*height: 100%;*/
+    transform: translateX(100%);
+    transition: 1s ease-out all;
+    background-color: #1c1c1c;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.personalInfo a:hover:before {
+    transform: translateX(0%);
+    transition: 1s ease-out;
+
+}
+
+.personalInfo a {
+    border: 1px solid white;
+    border-radius: 50px;
+    color: gray;
+    text-decoration: none;
+    z-index: 99989898898;
+
+    display: flex;
+    align-items: center;
+    width: 250px;
+    justify-content: space-between;
+}
+.somediv img{
+    z-index: 99999;
+}
+
+/*.somediv:before {*/
+/*    content: "";*/
+/*    background-color: white;*/
+/*    position: relative;*/
+/*    top: 0;*/
+/*    left: 0;*/
+/*    bottom: 0;*/
+/*    right: 0;*/
+/*    z-index: 434;*/
+/*    transform: translateX(100%);*/
+/*    transition: ease-out 1s;*/
+
+/*}*/
+
+
+.buttonText {
+    margin-left: 30px;
+    transition: 1s;
+}
+
+.icon {
+    background-color: white;
+    /*padding: 20px;*/
+    width: 55px;
+    height: 55px;
+    border-radius: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.personalInfo a:hover .buttonText {
+    color: #1c1c1c;
+    transition: 1s;
 }

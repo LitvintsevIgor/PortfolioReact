@@ -1,6 +1,7 @@
 import React from "react";
 import style from "./About.module.css"
 import photoAva from "./../images/photoAva.jpeg"
+import download from "./../images/icons8-download-24.png"
 
 export const About = () => {
 
@@ -63,6 +64,14 @@ export const About = () => {
                                     </li>
                                 </ul>
                             </div>
+                        </div>
+                        <div className={style.somediv}>
+                            <a href="#">
+                                <span className={style.buttonText}>Download CV</span>
+                                <span className={style.icon}>
+                                    <img src={download} alt=""/>
+                                </span>
+                            </a>
                         </div>
                     </div>
                     <div className={style.photo}>
