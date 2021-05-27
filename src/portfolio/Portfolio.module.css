@@ -1,0 +1,53 @@
+.container {
+    min-height: 100vh;
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.portfolioWrapper {
+    background-color: #1c1c1c;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+    margin: 100px 0 0;
+}
+
+
+.swiper-container {
+    width: 500px;
+}
+
+.svgWrap {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /*background-color: greenyellow;*/
+}
+
+.svgWrap img{
+    width: 200px;
+    height: 200px;
+    /*background-color: greenyellow;*/
+}
+
+
+.portfolioWrapper a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 15px;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    width: 70px;
+    border: 1px solid white;
+    border-radius: 10px;
+}

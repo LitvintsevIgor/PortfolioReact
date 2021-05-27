@@ -1,5 +1,4 @@
 .container {
-    /*background-color: #cbff8d;*/
     min-height: 100vh;
     width: 1200px;
     margin: 0 auto;
@@ -19,20 +18,17 @@
 }
 
 .about h1 {
-    /*background-color: #ffad9b;*/
     text-align: center;
-    margin: 50px 0 100px;
+
 }
 
 .about h2 {
-    /*background-color: #ffad9b;*/
     color: white;
     font-weight: 300;
     font-size: 1.8rem;
 }
 
 .mainInfo {
-    /*background-color: #ffea96;*/
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -61,24 +57,15 @@
 }
 
 .photo {
-    /*background-color: #cdd5ff;*/
     width: 40%;
     height: 400px;
 
 }
 
 .photo img {
-    /*height: 300px;*/
     height: 100%;
 
 }
-
-/*.somediv {*/
-/*    display: flex;*/
-/*    !*justify-content: flex-start;*!*/
-/*    !*background-color: forestgreen;*!*/
-
-/*}*/
 
 .personalInfo a {
     position: relative;
@@ -94,8 +81,6 @@
     right: 0;
     bottom: 0;
     z-index: -999999990;
-    /*width: 100%;*/
-    /*height: 100%;*/
     transform: translateX(100%);
     transition: 1s ease-out all;
     background-color: white;
@@ -111,8 +96,6 @@
     right: 0;
     bottom: 0;
     z-index: -999999990;
-    /*width: 100%;*/
-    /*height: 100%;*/
     transform: translateX(100%);
     transition: 1s ease-out all;
     background-color: #1c1c1c;
@@ -142,21 +125,6 @@
     z-index: 99999;
 }
 
-/*.somediv:before {*/
-/*    content: "";*/
-/*    background-color: white;*/
-/*    position: relative;*/
-/*    top: 0;*/
-/*    left: 0;*/
-/*    bottom: 0;*/
-/*    right: 0;*/
-/*    z-index: 434;*/
-/*    transform: translateX(100%);*/
-/*    transition: ease-out 1s;*/
-
-/*}*/
-
-
 .buttonText {
     margin-left: 30px;
     transition: 1s;
@@ -164,7 +132,6 @@
 
 .icon {
     background-color: white;
-    /*padding: 20px;*/
     width: 55px;
     height: 55px;
     border-radius: 55px;
@@ -178,4 +145,9 @@
 .personalInfo a:hover .buttonText {
     color: #1c1c1c;
     transition: 1s;
+}
+
+.nameOfBlock {
+    height: 20vh;
+    /*background-color: greenyellow;*/
 }

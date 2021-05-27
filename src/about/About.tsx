@@ -1,7 +1,34 @@
 import React from "react";
 import style from "./About.module.css"
 import photoAva from "./../images/photoAva.jpeg"
-import download from "./../images/icons8-download-24.png"
+import download from "./../images/download.svg"
+import Typewriter from "typewriter-effect";
+import {motion} from "framer-motion";
+
+export const leftBlockVariants = {
+    in: {
+        opacity: 1,
+        x: 0
+    },
+    out: {
+        opacity: 0,
+        x: "-100%"
+    }
+}
+export const rightBlockVariants = {
+    in: {
+        opacity: 1,
+        x: 0
+    },
+    out: {
+        opacity: 0,
+        x: "+100%"
+    }
+}
+
+export const blockTransition = {
+    duration: 1
+}
 
 export const About = () => {
 
@@ -11,11 +38,41 @@ export const About = () => {
         <div className={style.about}>
             <div className={style.container}>
                 <div className={style.test}></div>
-                <h1>About me</h1>
+                <div className={style.nameOfBlock}>
+                    <Typewriter
+                        options={{
+                            autoStart: true,
+                            loop: true,
+                            delay: 140,
+                            skipAddStyles: true,
+                            wrapperClassName: `nameOfBlock`
+                        }}
+                        onInit={(typewriter) => {
+                            typewriter.typeString(`About me`)
+                                .callFunction(() => {
+                                    console.log('String typed out!');
+                                })
+                                .pauseFor(2500)
+                                .deleteChars(3)
+                                .pauseFor(2500)
+                                .typeString(` me`)
+                                .pauseFor(2500)
+                                .deleteChars(3)
+                                .pauseFor(2500)
+                                .typeString(` me`)
+                                .pauseFor(2500)
+                                .callFunction(() => {
+                                    console.log('All strings were deleted');
+                                })
+                                .start();
+                        }}
+                    />
+                    {/*<h1>About me</h1>*/}
+                </div>
                 <div className={style.mainInfo}>
-                    <div className={style.personalInfo}>
+                    <motion.div className={style.personalInfo} initial="out" exit="out" animate="in" variants={leftBlockVariants} transition={blockTransition}>
                         <h2>Personal info</h2>
-                        <div className={style.dataAboutMe}>
+                        <div className={style.dataAboutMe} >
                             <div className={style.firstColumn}>
                                 <ul>
                                     <li>
@@ -73,10 +130,10 @@ export const About = () => {
                                 </span>
                             </a>
                         </div>
-                    </div>
-                    <div className={style.photo}>
+                    </motion.div>
+                    <motion.div className={style.photo} initial="out" exit="out" animate="in" variants={rightBlockVariants} transition={blockTransition}>
                         <img src={photoAva} alt=""/>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
 
