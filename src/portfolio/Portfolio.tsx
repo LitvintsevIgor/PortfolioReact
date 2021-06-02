@@ -6,11 +6,9 @@ import meeting from './../images/forSlider/meeting.svg';
 import todo from './../images/forSlider/todo.svg';
 import 'swiper/swiper-bundle.css';
 import style from "./Portfolio.module.css"
-import Typewriter from 'typewriter-effect';
 import {motion} from "framer-motion";
 import './Portfolio.css';
-
-
+import {SectionTitle} from "../common/SectionTitle/SectionTitle";
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation, Keyboard]);
 
@@ -18,11 +16,9 @@ SwiperCore.use([Pagination, Navigation, Keyboard]);
 export const pageVariants = {
     in: {
         opacity: 1,
-        // y: 0
     },
     out: {
         opacity: 0,
-        // y: "-100%"
     }
 }
 
@@ -32,49 +28,16 @@ export const pageTransition = {
 
 export const Portfolio = () => {
 
-
-    // let slides = [dashboard, meeting, todo]
-
     let slides = [{pic: dashboard, name: "Some project"},
         {pic: meeting, name: "Social Network"},
         {pic: todo, name: "Todo List"}]
 
-
     return (
-        <div className={style.portfolioWrapper} >
+        <div className={style.portfolioWrapper}>
             <div className={style.container}>
-                <div className={style.nameOfBlock}>
-                    <Typewriter
-                        options={{
-                            autoStart: true,
-                            loop: true,
-                            delay: 140,
-                            skipAddStyles: true,
-                            wrapperClassName: `nameOfBlock`
-                        }}
-                        onInit={(typewriter) => {
-                            typewriter.typeString(`Work I have done`)
-                                .callFunction(() => {
-                                    console.log('String typed out!');
-                                })
-                                .pauseFor(2500)
-                                .deleteChars(12)
-                                .pauseFor(2500)
-                                .typeString(` I have done`)
-                                .pauseFor(2500)
-                                .deleteChars(12)
-                                .pauseFor(2500)
-                                .typeString(` I have done`)
-                                .pauseFor(2500)
-                                .callFunction(() => {
-                                    console.log('All strings were deleted');
-                                })
-                                .start();
-                        }}
-                    />
-
-                </div>
-                <motion.div initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
+                <SectionTitle allTitle={`Work I have done`} partOFTitle={` I have done`} deleteChars={12}/>
+                <motion.div initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}
+                            className={style.wrapperTest}>
                     <Swiper tag={"section"}
                             wrapperTag={"ul"}
                             navigation
@@ -106,11 +69,8 @@ export const Portfolio = () => {
 
                             )
                         })}
-
                     </Swiper>
                 </motion.div>
-
-
             </div>
 
         </div>

@@ -4,6 +4,7 @@ import photoAva from "./../images/photoAva.jpeg"
 import download from "./../images/download.svg"
 import Typewriter from "typewriter-effect";
 import {motion} from "framer-motion";
+import {SectionTitle} from "../common/SectionTitle/SectionTitle";
 
 export const leftBlockVariants = {
     in: {
@@ -31,44 +32,11 @@ export const blockTransition = {
 }
 
 export const About = () => {
-
-    // let aboutWrapper = style.about + " " + style.container
-
     return (
         <div className={style.about}>
             <div className={style.container}>
-                <div className={style.test}></div>
-                <div className={style.nameOfBlock}>
-                    <Typewriter
-                        options={{
-                            autoStart: true,
-                            loop: true,
-                            delay: 140,
-                            skipAddStyles: true,
-                            wrapperClassName: `nameOfBlock`
-                        }}
-                        onInit={(typewriter) => {
-                            typewriter.typeString(`About me`)
-                                .callFunction(() => {
-                                    console.log('String typed out!');
-                                })
-                                .pauseFor(2500)
-                                .deleteChars(3)
-                                .pauseFor(2500)
-                                .typeString(` me`)
-                                .pauseFor(2500)
-                                .deleteChars(3)
-                                .pauseFor(2500)
-                                .typeString(` me`)
-                                .pauseFor(2500)
-                                .callFunction(() => {
-                                    console.log('All strings were deleted');
-                                })
-                                .start();
-                        }}
-                    />
-                    {/*<h1>About me</h1>*/}
-                </div>
+                {/*<div className={style.test}></div>*/}
+                <SectionTitle allTitle={`About me`} partOFTitle={` me`} deleteChars={3}/>
                 <div className={style.mainInfo}>
                     <motion.div className={style.personalInfo} initial="out" exit="out" animate="in" variants={leftBlockVariants} transition={blockTransition}>
                         <h2>Personal info</h2>

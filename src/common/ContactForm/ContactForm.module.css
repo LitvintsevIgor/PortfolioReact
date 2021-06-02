@@ -1,0 +1,30 @@
+.form {
+    display: flex;
+    justify-content: space-between;
+    background-color: #dcb3ff;
+    flex-wrap: wrap;
+}
+
+.myInput {
+    flex: 0 0 25%;
+    max-width: 33.333333%;
+    background-color: #fac2c2;
+}
+
+.myInput input {
+    width: 100%;
+
+}
+
+.myTextarea {
+    background-color: #e0ffb3;
+    flex: 0 0 100%;
+    width: 100%;
+}
+
+.myTextarea textarea {
+    width: 100%;
+}
+
+
+

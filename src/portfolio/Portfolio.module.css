@@ -1,23 +1,19 @@
-.container {
-    min-height: 100vh;
-    width: 1200px;
-    margin: 0 auto;
-}
-
 .portfolioWrapper {
     background-color: #1c1c1c;
     color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    min-width: 1200px;
+    margin: 100px auto;
+    display: flex;
     flex-direction: column;
-}
+    justify-content: space-between;
+    height: calc(100vh - 200px);
 
-h1 {
-    text-align: center;
-    margin: 100px 0 0;
 }
-
 
 .swiper-container {
     width: 500px;
@@ -25,18 +21,16 @@ h1 {
 
 .svgWrap {
     width: 500px;
-    height: 500px;
+    height: 400px;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-direction: column;
-    /*background-color: greenyellow;*/
 }
 
 .svgWrap img{
     width: 200px;
     height: 200px;
-    /*background-color: greenyellow;*/
 }
 
 
@@ -51,3 +45,4 @@ h1 {
     border: 1px solid white;
     border-radius: 10px;
 }
+

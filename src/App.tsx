@@ -3,9 +3,10 @@ import './App.css';
 import {Main} from "./main/Main";
 import {Header} from "./header/Header";
 import {About} from "./about/About";
-import { Route } from 'react-router-dom';
+import {Redirect, Route, Switch } from 'react-router-dom';
 import {Portfolio} from "./portfolio/Portfolio";
-import {AnimatePresence, motion} from "framer-motion";
+import {AnimatePresence} from "framer-motion";
+import { Contact } from './contact/Contact';
 
 
 
@@ -14,9 +15,13 @@ function App() {
     <div className="App">
         <Header/>
         <AnimatePresence exitBeforeEnter>
-            <Route path={"/main"} render={() => <Main/>}/>
-            <Route path={"/about"} render={() => <About/>}/>
-            <Route path={"/portfolio"} render={() => <Portfolio/>}/>
+            <Switch>
+                <Route path={"/main"} render={() => <Main/>}/>
+                <Route path={"/about"} render={() => <About/>}/>
+                <Route path={"/portfolio"} render={() => <Portfolio/>}/>
+                <Route path={"/contact"} render={() => <Contact/>}/>
+                <Redirect from={'/'} to={"/main"}/>
+            </Switch>
         </AnimatePresence>
     </div>
   );
