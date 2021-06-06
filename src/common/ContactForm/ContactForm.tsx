@@ -28,24 +28,28 @@ export const ContactForm = () => {
                 }}
             >
                 <Form className={style.form}>
-                    <div className={style.myInput}>
-                        <Field id="firstName" name="firstName" placeholder="Your name" />
-                    </div>
-                    <div className={style.myInput}>
-                        <Field
-                            id="email"
-                            name="email"
-                            placeholder="Your email"
-                            type="email"
-                        />
-                    </div>
-                    <div className={style.myInput}>
-                        <Field id="subject" name='subject' placeholder="Your subject"/>
+                    <div className={style.inputs}>
+                        <div className={style.myInput}>
+                            <Field id="firstName" name="firstName" placeholder="Your name" />
+                        </div>
+                        <div className={style.myInput}>
+                            <Field
+                                id="email"
+                                name="email"
+                                placeholder="Your email"
+                                type="email"
+                            />
+                        </div>
+                        <div className={style.myInput}>
+                            <Field id="subject" name='subject' placeholder="Your subject"/>
+                        </div>
                     </div>
                     <div className={style.myTextarea}>
                         <Field as="textarea" id="message" name='message' placeholder="Your message"/>
                     </div>
-                    <button type="submit">Submit</button>
+                    <div>
+                        <button type="submit">Submit</button>
+                    </div>
                 </Form>
             </Formik>
         </div>
