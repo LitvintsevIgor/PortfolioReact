@@ -4,6 +4,10 @@ import {SectionTitle} from "../common/SectionTitle/SectionTitle";
 import {ContactForm} from "../common/ContactForm/ContactForm";
 import iconMail from "../images/forContactSection/letterForContact.svg";
 import iconPhone from "../images/forContactSection/phone-call.svg";
+import fbIcon from '../images/forContactSection/free-icon-facebook-2111392.svg'
+import instIcon from '../images/forContactSection/free-icon-instagram-1384031.svg'
+import linkedinIcon from '../images/forContactSection/free-icon-linkedin-letters-25325.svg'
+import vkIcon from '../images/forContactSection/vk.svg'
 
 
 export const Contact = () => {
@@ -12,6 +16,9 @@ export const Contact = () => {
         {icon: iconMail, name: "Mail me", href: "mailto:litvincevi@mail.ru", text: 'litvincevi@mail.ru'},
         {icon: iconPhone, name: "Call me", href: "tel:+79515642759", text: '+7 (951) 564-27-59'},
     ]
+
+
+    let socialIcons = [fbIcon, instIcon, linkedinIcon, vkIcon]
 
     return (
         <div className={style.contactMe}>
@@ -43,6 +50,19 @@ export const Contact = () => {
                                 })
                                 }
                             </ul>
+                        </div>
+                        <div className={style.socialIcons}>
+                            {
+                                socialIcons.map( (i) => {
+                                    return (
+                                        <div className={style.socialIcon} >
+                                            <a href="">
+                                                <img src={i}/>
+                                            </a>
+                                        </div>
+                                    )
+                                })
+                            }
                         </div>
                     </div>
                     <ContactForm/>

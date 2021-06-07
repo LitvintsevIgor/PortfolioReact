@@ -1,17 +1,16 @@
 .form {
     display: flex;
     justify-content: flex-start;
-    background-color: #dcb3ff;
+    /*background-color: #dcb3ff;*/
     flex-wrap: wrap;
 }
 
 .myInput {
-    background-color: #fac2c2;
+    /*background-color: #fac2c2;*/
 }
 
 .myInput input {
-    width: 150px;
-    height: 24px;
+    max-width: 190px;
     border: none;
     border-radius: 30px;
     padding: 11px 26px;
@@ -19,20 +18,24 @@
 }
 
 .myTextarea {
-    background-color: #e0ffb3;
+    /*background-color: #e0ffb3;*/
     width: 100%;
     margin-bottom: 20px;
 }
 
 .myTextarea textarea {
     height: 130px;
-    width: 93.2%;
+    width: 100%;
     border-radius: 30px;
     display: block;
     border: none;
     padding: 11px 26px;
     font-family: Montserrat, sans-serif;
+    background-color: #252525;
+
 }
+
+
 
 .inputs{
     display:flex;
@@ -43,6 +46,10 @@
 
 textarea {
 
+}
+
+.contactForm {
+    max-width: 700px;
 }
 
 /*@media screen and(max-width:560px){*/

@@ -46,11 +46,13 @@
 }
 
 .App {
-    box-sizing: border-box;
     font-family: MontserratLight, serif;
     background-color: #1c1c1c;
 }
 
+*{
+    box-sizing: border-box;
+}
 
 a {
     text-decoration: none;

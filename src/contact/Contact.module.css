@@ -4,24 +4,28 @@
 
 .container {
     justify-content: flex-start;
-    background-color: blueviolet;
+    /*background-color: blueviolet;*/
+    min-height: 100vh;
+    padding: 100px 0;
 }
 
 .content {
-    background-color: green;
+    /*background-color: green;*/
     display: flex;
     flex-direction: row;
+    /*flex-wrap: wrap;*/
     justify-content: space-around;
     width: 100%;
-
 }
 
 .myContacts {
-    background-color: #fac2c2;
-    flex: 0 0 33.333333%;
-    max-width: 33.333333%;
+    /*background-color: #fac2c2;*/
+    max-width: 300px;
 }
 
+.contactMeLinks {
+    margin-bottom: 20px;
+}
 
 
 .contactMeLinks a{
@@ -33,22 +37,43 @@
     margin: 0;
 }
 .main {
-    background-color: #ff9efe;
+    /*background-color: #ff9efe;*/
     display: flex;
     align-items: flex-end;
 }
 
 
 .left {
-    background-color: #dcb3ff;
+    /*background-color: #dcb3ff;*/
     margin: 0 5px 0 0;
     display: flex;
 }
 
 .left img{
-    background-color: #b3ffcc;
+    /*background-color: #b3ffcc;*/
 }
 
 .right {
-    background-color: #e0ffb3;
+    /*background-color: #e0ffb3;*/
+}
+
+.socialIcon {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.socialIcon img {
+    width: 17px;
+    height: 17px;
+}
+
+.socialIcons {
+    display: flex;
+    width: 200px;
+    justify-content: space-between;
 }

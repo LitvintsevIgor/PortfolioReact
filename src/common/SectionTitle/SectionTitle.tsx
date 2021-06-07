@@ -38,7 +38,7 @@ export const SectionTitle = (props: SectionTitleType) => {
                         .callFunction(() => {
                             console.log('All strings were deleted');
                         })
-                        // .start();
+                        .start();
                 }}
             />
 
