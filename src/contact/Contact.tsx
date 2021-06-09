@@ -2,7 +2,7 @@ import commonStyle from '../common/styles/Container.module.css'
 import style from './Contact.module.css'
 import {SectionTitle} from "../common/SectionTitle/SectionTitle";
 import {ContactForm} from "../common/ContactForm/ContactForm";
-import iconMail from "../images/forContactSection/letterForContact.svg";
+import iconMail from "../images/forContactSection/mail.svg";
 import iconPhone from "../images/forContactSection/phone-call.svg";
 import fbIcon from '../images/forContactSection/free-icon-facebook-2111392.svg'
 import instIcon from '../images/forContactSection/free-icon-instagram-1384031.svg'

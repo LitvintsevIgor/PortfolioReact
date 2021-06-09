@@ -3,6 +3,7 @@
     justify-content: flex-start;
     /*background-color: #dcb3ff;*/
     flex-wrap: wrap;
+
 }
 
 .myInput {
@@ -14,6 +15,9 @@
     border: none;
     border-radius: 30px;
     padding: 11px 26px;
+    font-size: 1rem;
+    background-color: #252525;
+
 
 }
 
@@ -24,7 +28,7 @@
 }
 
 .myTextarea textarea {
-    height: 130px;
+    height: 170px;
     width: 100%;
     border-radius: 30px;
     display: block;
@@ -32,6 +36,7 @@
     padding: 11px 26px;
     font-family: Montserrat, sans-serif;
     background-color: #252525;
+    font-size: 1rem;
 
 }
 
@@ -49,7 +54,7 @@ textarea {
 }
 
 .contactForm {
-    max-width: 700px;
+    max-width: 650px;
 }
 
 /*@media screen and(max-width:560px){*/

@@ -23,6 +23,14 @@
     max-width: 300px;
 }
 
+.myContacts h3 {
+    margin-top: 0;
+    line-height: 15px;
+}
+
+.myContacts p {
+    margin-bottom: 15px;
+}
 .contactMeLinks {
     margin-bottom: 20px;
 }
@@ -40,12 +48,13 @@
     /*background-color: #ff9efe;*/
     display: flex;
     align-items: flex-end;
+    margin-bottom: 15px;
 }
 
 
 .left {
     /*background-color: #dcb3ff;*/
-    margin: 0 5px 0 0;
+    margin: 0 15px 0 0;
     display: flex;
 }
 
@@ -68,6 +77,7 @@
 }
 
 .socialIcon img {
+    display: block;
     width: 17px;
     height: 17px;
 }

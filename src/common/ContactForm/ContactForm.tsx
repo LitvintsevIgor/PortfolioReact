@@ -1,5 +1,7 @@
 import style from "../../common/ContactForm/ContactForm.module.css";
 import {Field, Form, Formik, FormikHelpers} from "formik";
+import {SuperButton} from "../SuperButton/SuperButton";
+import sendMessageIcon from '../../images/telegram.svg'
 
 interface Values {
     firstName: string;
@@ -48,7 +50,7 @@ export const ContactForm = () => {
                         <Field as="textarea" id="message" name='message' placeholder="Your message"/>
                     </div>
                     <div>
-                        <button type="submit">Submit</button>
+                        <SuperButton text={'Send message'} icon={sendMessageIcon}/>
                     </div>
                 </Form>
             </Formik>
