@@ -1,10 +1,23 @@
 import React from "react";
-import style from "./About.module.css"
+import style from "./About.module.scss"
 import photoAva from "./../images/photoAva.jpeg"
 import download from "./../images/download.svg"
-import Typewriter from "typewriter-effect";
 import {motion} from "framer-motion";
 import {SectionTitle} from "../common/SectionTitle/SectionTitle";
+import {SuperButton} from "../common/SuperButton/SuperButton";
+
+const info = [
+    {point: "First Name:", myData: " Igor"},
+    {point: "Last Name:", myData: " Litvintsev"},
+    {point: "Age:", myData: " 27"},
+    {point: "Nationality:", myData: " Russian"},
+    {point: "Freelance:", myData: " Available"},
+    {point: "Address:", myData: " Voronezh"},
+    {point: "Phone:", myData: " +79515642759"},
+    {point: "Email:", myData: " litvincevi@mail.ru"},
+    {point: "Skype:", myData: " Litvintsev.Igor"},
+    {point: "Languages:", myData: " Russian, English"},
+]
 
 export const leftBlockVariants = {
     in: {
@@ -35,72 +48,29 @@ export const About = () => {
     return (
         <div className={style.about}>
             <div className={style.container}>
-                {/*<div className={style.test}></div>*/}
                 <SectionTitle allTitle={`About me`} partOFTitle={` me`} deleteChars={3}/>
                 <div className={style.mainInfo}>
-                    <motion.div className={style.personalInfo} initial="out" exit="out" animate="in" variants={leftBlockVariants} transition={blockTransition}>
+                    <motion.div className={style.personalInfo} initial="out" exit="out" animate="in"
+                                variants={leftBlockVariants} transition={blockTransition}>
                         <h2>Personal info</h2>
-                        <div className={style.dataAboutMe} >
-                            <div className={style.firstColumn}>
-                                <ul>
-                                    <li>
-                                        <span>First Name:</span>
-                                        <span> Igor</span>
-                                    </li>
-                                    <li>
-                                        <span>Last Name:</span>
-                                        <span> Litvintsev</span>
-                                    </li>
-                                    <li>
-                                        <span>Age:</span>
-                                        <span> 27</span>
-                                    </li>
-                                    <li>
-                                        <span>Nationality:</span>
-                                        <span> Russian</span>
-                                    </li>
-                                    <li>
-                                        <span>Freelance:</span>
-                                        <span> Available</span>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className={style.secondColumn}>
-                                <ul>
-                                    <li>
-                                        <span>Address:</span>
-                                        <span> Voronezh</span>
-                                    </li>
-                                    <li>
-                                        <span>Phone:</span>
-                                        <span> +79515642759</span>
-                                    </li>
-                                    <li>
-                                        <span>Email:</span>
-                                        <span> litvincevi@mail.ru</span>
-                                    </li>
-                                    <li>
-                                        <span>Skype:</span>
-                                        <span> Litvintsev.Igor</span>
-                                    </li>
-                                    <li>
-                                        <span>Langages:</span>
-                                        <span> Russian, English</span>
-                                    </li>
-                                </ul>
-                            </div>
+                        <div className={style.dataAboutMe}>
+                            <ul>
+                                {
+                                    info.map((i) => {
+                                        return (
+                                            <li>
+                                                <span>{i.point}</span>
+                                                <span>{i.myData}</span>
+                                            </li>)
+                                    })
+                                }
+                            </ul>
                         </div>
-                        <div className={style.somediv}>
-                            <a href="#">
-                                <span className={style.buttonText}>Download CV</span>
-                                <span className={style.icon}>
-                                    <img src={download} alt=""/>
-                                </span>
-                            </a>
-                        </div>
+                        <SuperButton text="Download CV" icon={download}/>
                     </motion.div>
-                    <motion.div className={style.photo} initial="out" exit="out" animate="in" variants={rightBlockVariants} transition={blockTransition}>
-                        <img src={photoAva} alt=""/>
+                    <motion.div className={style.photo} initial="out" exit="out" animate="in"
+                                variants={rightBlockVariants} transition={blockTransition}>
+                        {/*<img src={photoAva} alt=""/>*/}
                     </motion.div>
                 </div>
             </div>

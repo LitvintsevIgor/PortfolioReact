@@ -1,5 +1,5 @@
 import commonStyle from '../common/styles/Container.module.css'
-import style from './Contact.module.css'
+import style from './Contact.module.scss'
 import {SectionTitle} from "../common/SectionTitle/SectionTitle";
 import {ContactForm} from "../common/ContactForm/ContactForm";
 import iconMail from "../images/forContactSection/mail.svg";
@@ -57,7 +57,7 @@ export const Contact = () => {
                                     return (
                                         <div className={style.socialIcon} >
                                             <a href="">
-                                                <img src={i}/>
+                                                <img src={i} className={style.forImg}/>
                                             </a>
                                         </div>
                                     )

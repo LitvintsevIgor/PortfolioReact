@@ -1,16 +1,20 @@
 import React from "react";
-import style from "./Main.module.css"
+import style from "./Main.module.scss"
 import Typewriter from "typewriter-effect";
 import {motion} from "framer-motion";
+import gitIcon from '../images/forMain/gitMain.svg'
+import fbIcon from './../images/forMain/fbMain.svg'
+import instIcon from './../images/forMain/instMain.svg'
+
+
+const icons = [{icon: gitIcon, link: "https://github.com/LitvintsevIgor"}, {icon: fbIcon, link: "https://www.facebook.com/igor.litvintsev.5"}, {icon: instIcon, link: "https://www.instagram.com/litvintsev_igor"}]
 
 export const pageVariants = {
     in: {
-        opacity: 1,
-        // y: 0
+        opacity: 1
     },
     out: {
-        opacity: 0,
-        // y: "-100%"
+        opacity: 0
     }
 }
 
@@ -21,14 +25,13 @@ export const pageTransition = {
 export const Main = () => {
     return (
         <motion.div className={style.main} initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
-            <div className={style.nameOfBlock}>
+            <div className={style.title}>
                 <Typewriter
                     options={{
                         autoStart: true,
                         loop: true,
                         delay: 140,
-                        skipAddStyles: true,
-                        wrapperClassName: `nameOfBlock`
+                        skipAddStyles: true
                     }}
                     onInit={(typewriter) => {
                         typewriter.typeString(`Hi, I am Igor Litvintsev`)
@@ -51,22 +54,19 @@ export const Main = () => {
                     }}
                 />
             </div>
-            {/*<h1>Hi, I am Igor Litvintsev</h1>*/}
             <div className={style.socialLinks}>
                 <ul>
-                    <li>
-                        <a href="#">
-                            <i className={style.iconGit}/>
-                        </a>
-                    </li><li>
-                        <a href="#">
-                            <i className={style.iconFb}/>
-                        </a>
-                    </li><li>
-                        <a href="#">
-                            <i className={style.iconInst}/>
-                        </a>
-                    </li>
+                    {
+                        icons.map( (i) => {
+                            return (
+                                <li>
+                                    <a href={i.link}>
+                                        <img src={i.icon} alt=""/>
+                                    </a>
+                                </li>
+                            )
+                        } )
+                    }
                 </ul>
             </div>
         </motion.div>

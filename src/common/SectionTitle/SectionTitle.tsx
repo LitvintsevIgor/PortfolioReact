@@ -1,7 +1,7 @@
 import Typewriter from "typewriter-effect";
 import React from "react";
-import style from './SectionTitle.module.css';
-import './SectionTitle.css'
+import style from './SectionTitle.module.scss';
+import './Typewriter.css'
 
 
 export type SectionTitleType = {

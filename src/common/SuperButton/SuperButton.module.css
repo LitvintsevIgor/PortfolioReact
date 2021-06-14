@@ -56,6 +56,7 @@
 .buttonText {
     margin-left: 30px;
     transition: 1s;
+    color: white;
 }
 
 .icon {

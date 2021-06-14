@@ -1,0 +1,57 @@
+.about {
+  color: white;
+  .container {
+    min-height: 100vh;
+    padding: 100px 0;
+
+    .mainInfo {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      max-width: 1200px;
+      @media screen and (max-width: 900px) {
+        flex-direction: column-reverse;
+      }
+    }
+  }
+}
+
+
+.about h2 {
+  color: white;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+
+.mainInfo {
+
+}
+
+
+.personalInfo {
+  max-width: 450px;
+}
+
+.dataAboutMe ul {
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  max-height: 150px;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.dataAboutMe li {
+  margin-bottom: 5px;
+
+}
+
+.photo {
+  width: 400px;
+  height: 400px;
+  background: no-repeat url("./../images/photoAva.jpeg") center;
+  background-size: cover;
+}
