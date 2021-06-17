@@ -1,0 +1,43 @@
+.portfolio {
+    color: white;
+    overflow: hidden;
+    a {
+        display: inline-block;
+        text-decoration: none;
+        margin: 0 15px;
+        color: white;
+        padding: 10px;
+        text-align: center;
+        width: 90px;
+        border: 1px solid white;
+        border-radius: 10px;
+    }
+    .container {
+        min-height: 100vh;
+        padding: 100px 15px;
+        .svgWrap {
+            width: 500px;
+            height: 400px;
+            margin-top: 50px;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            @media screen and (max-width: 550px){
+                width: 400px;
+                height: 300px;
+            }
+            @media screen and (max-width: 376px){
+                width: 320px;
+                height: 270px;
+            }
+            img{
+                width: 200px;
+                height: 200px;
+                @media screen and (max-width: 550px){
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+        }
+    }
+}

@@ -5,9 +5,9 @@ import dashboard from './../images/forSlider/dashboard.svg';
 import meeting from './../images/forSlider/meeting.svg';
 import todo from './../images/forSlider/todo.svg';
 import 'swiper/swiper-bundle.css';
-import style from "./Portfolio.module.css"
+import style from "./Portfolio.module.scss"
 import {motion} from "framer-motion";
-import './Portfolio.css';
+import './Portfolio.scss';
 import {SectionTitle} from "../common/SectionTitle/SectionTitle";
 // install Swiper modules
 SwiperCore.use([Pagination, Navigation, Keyboard]);
@@ -33,7 +33,7 @@ export const Portfolio = () => {
         {pic: todo, name: "Todo List"}]
 
     return (
-        <div className={style.portfolioWrapper}>
+        <div className={style.portfolio}>
             <div className={style.container}>
                 <SectionTitle allTitle={`Work I have done`} partOFTitle={` I have done`} deleteChars={12}/>
                 <motion.div initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}
@@ -72,7 +72,6 @@ export const Portfolio = () => {
                     </Swiper>
                 </motion.div>
             </div>
-
         </div>
     )
 }

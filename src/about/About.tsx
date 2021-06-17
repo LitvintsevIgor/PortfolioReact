@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./About.module.scss"
-import photoAva from "./../images/photoAva.jpeg"
+import commonContainer from "./../common/styles/Container.module.css"
 import download from "./../images/download.svg"
 import {motion} from "framer-motion";
 import {SectionTitle} from "../common/SectionTitle/SectionTitle";
@@ -70,7 +70,6 @@ export const About = () => {
                     </motion.div>
                     <motion.div className={style.photo} initial="out" exit="out" animate="in"
                                 variants={rightBlockVariants} transition={blockTransition}>
-                        {/*<img src={photoAva} alt=""/>*/}
                     </motion.div>
                 </div>
             </div>

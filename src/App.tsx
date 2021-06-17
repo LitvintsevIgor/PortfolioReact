@@ -13,7 +13,7 @@ import { Contact } from './contact/Contact';
 function App() {
   return (
     <div className="App">
-        <Header/>
+        {/*<Header/>*/}
         <AnimatePresence exitBeforeEnter>
             <Switch>
                 <Route path={"/main"} render={() => <Main/>}/>

@@ -1,9 +1,14 @@
 .about {
   color: white;
+  overflow: hidden;
+  h2 {
+    color: white;
+    font-weight: 300;
+    font-size: 1.8rem;
+  }
   .container {
     min-height: 100vh;
-    padding: 100px 0;
-
+    padding: 100px 15px;
     .mainInfo {
       display: flex;
       align-items: center;
@@ -14,44 +19,40 @@
       @media screen and (max-width: 900px) {
         flex-direction: column-reverse;
       }
+      .photo {
+        width: 400px;
+        height: 400px;
+        background: no-repeat url("./../images/photoAva.jpeg") center;
+        background-size: cover;
+        @media screen and (max-width: 426px) {
+          width: 300px;
+          height: 300px;
+        }
+        @media screen and (max-width: 321px) {
+          width: 270px;
+          height: 270px;
+        }
+      }
+      .personalInfo {
+        max-width: 450px;
+        .dataAboutMe ul {
+          display: flex;
+          flex-wrap: wrap;
+          width: 500px;
+          max-height: 150px;
+          align-items: flex-start;
+          flex-direction: column;
+          margin-bottom: 30px;
+          @media screen and (max-width: 426px) {
+            max-height: 400px;
+            width: 300px;
+
+          }
+          li {
+            margin-bottom: 5px;
+          }
+        }
+      }
     }
   }
-}
-
-
-.about h2 {
-  color: white;
-  font-weight: 300;
-  font-size: 1.8rem;
-}
-
-.mainInfo {
-
-}
-
-
-.personalInfo {
-  max-width: 450px;
-}
-
-.dataAboutMe ul {
-  display: flex;
-  flex-wrap: wrap;
-  width: 500px;
-  max-height: 150px;
-  align-items: flex-start;
-  flex-direction: column;
-  margin-bottom: 30px;
-}
-
-.dataAboutMe li {
-  margin-bottom: 5px;
-
-}
-
-.photo {
-  width: 400px;
-  height: 400px;
-  background: no-repeat url("./../images/photoAva.jpeg") center;
-  background-size: cover;
 }

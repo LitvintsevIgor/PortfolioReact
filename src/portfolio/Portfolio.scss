@@ -1,12 +1,18 @@
 .swiper-container {
     width: 500px;
-
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 550px){
+        width: 350px;
+    }
+    @media screen and (max-width: 321px){
+        width: 300px;
+    }
 }
 
 .swiper-wrapper {
     padding-inline-start: 0;
-    /*background-color: greenyellow;*/
     margin: auto;
 }
 
