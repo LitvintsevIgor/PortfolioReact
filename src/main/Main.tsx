@@ -31,8 +31,10 @@ export const Main = () => {
                         autoStart: true,
                         loop: true,
                         delay: 140,
-                        skipAddStyles: true
+                        skipAddStyles: true,
+                        cursor: ''
                     }}
+
                     onInit={(typewriter) => {
                         typewriter.typeString(`Hi, I am Igor Litvintsev`)
                             .callFunction(() => {

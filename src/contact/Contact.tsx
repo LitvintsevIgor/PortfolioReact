@@ -22,7 +22,7 @@ export const Contact = () => {
 
     return (
         <div className={style.contactMe}>
-            <div className={`${commonStyle.container} ${style.container}`}>
+            <div className={style.container}>
                 <SectionTitle allTitle={'Contact me'} partOFTitle={' me'} deleteChars={3}/>
                 <div className={style.content}>
                     <div className={style.myContacts}>

@@ -1,0 +1,59 @@
+.contactForm {
+    max-width: 650px;
+    min-width: 587px;
+    @media screen and (max-width: 650px) {
+        max-width: 100%;
+        min-width: 200px;
+    }
+    .form {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        .inputs{
+            display:flex;
+            justify-content: space-between;
+            width: 100%;
+            margin-bottom: 20px;
+            @media screen and (max-width: 650px) {
+                flex-direction: column;
+                margin-bottom: 0;
+            }
+            .myInput {
+                max-width: 30%;
+
+                @media screen and (max-width: 650px) {
+                    max-width: 100%;
+                    margin-bottom: 20px;
+                }
+            }
+            input {
+                display: block;
+                width: 100%;
+                //max-width: 190px;
+                border: none;
+                border-radius: 30px;
+                padding: 11px 26px;
+                font-size: 1rem;
+                background-color: #252525;
+                outline: none;
+            }
+        }
+        .myTextarea {
+            width: 100%;
+            margin-bottom: 20px;
+            textarea {
+                height: 170px;
+                width: 100%;
+                border-radius: 30px;
+                display: block;
+                border: none;
+                padding: 11px 26px;
+                font-family: Montserrat, sans-serif;
+                background-color: #252525;
+                font-size: 1rem;
+                outline: none;
+
+            }
+        }
+    }
+}

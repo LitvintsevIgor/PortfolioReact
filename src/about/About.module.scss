@@ -9,6 +9,8 @@
   .container {
     min-height: 100vh;
     padding: 100px 15px;
+    max-width: calc(100% - 200px);
+    margin: 0 auto;
     .mainInfo {
       display: flex;
       align-items: center;
@@ -16,7 +18,7 @@
       flex-wrap: wrap;
       margin: 0 auto;
       max-width: 1200px;
-      @media screen and (max-width: 900px) {
+      @media screen and (max-width: 1150px) {
         flex-direction: column-reverse;
       }
       .photo {

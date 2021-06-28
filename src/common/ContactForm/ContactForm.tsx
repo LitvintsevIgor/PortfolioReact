@@ -1,4 +1,4 @@
-import style from "../../common/ContactForm/ContactForm.module.css";
+import style from "./ContactForm.module.scss";
 import {Field, Form, Formik, FormikHelpers} from "formik";
 import {SuperButton} from "../SuperButton/SuperButton";
 import sendMessageIcon from '../../images/telegram.svg'
