@@ -1,5 +1,4 @@
 import React from "react";
-import {NavLink} from "react-router-dom";
 import style from "./Header.module.scss"
 import iconHome from './../images/forNavbar/home.svg'
 import iconletter from './../images/forNavbar/letter.svg'

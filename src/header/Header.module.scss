@@ -10,15 +10,6 @@ body.lock {
 }
 
 
-//.burger_open {
-//    position: absolute;
-//    left: 0;
-//    top: 0;
-//    width: 100%;
-//    height: 100%;
-//    background-color: #1c1c1c;
-//    z-index: 5;
-//}
 .header a:link {
   text-decoration: none;
 }
@@ -27,10 +18,10 @@ body.lock {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 50%;
+  height: 40%;
   width: 100px;
   position: fixed;
-  z-index: 1;
+  z-index: 6;
   right: 0;
   transform: translate(0, -50%);
   top: 50%;
@@ -53,6 +44,7 @@ body.lock {
 }
 
 
+
 .iconLink {
   display: flex;
   align-items: center;
@@ -72,7 +64,7 @@ body.lock {
   height: 50px;
   line-height: 50px;
   border-radius: 25px;
-  background-color: white;
+  background-color: gray;
   color: #1c1c1c;
   z-index: 0;
   padding-left: 20px;
@@ -94,6 +86,7 @@ body.lock {
   transform: translateX(-50px);
   transition: 0.3s ease-out;
   opacity: 1;
+  background-color: white;
 
 
 }
@@ -103,11 +96,21 @@ body.lock {
   transition: 3s ease-out;
 }
 
+.activeLink .buttonText {
+  background-color: white;
+  transition: 0.3s ease-out;
+}
+
+.activeLink .icon {
+  background-color: white;
+  transition: 0.3s ease-out;
+}
+
 .icon {
   width: 50px;
   height: 50px;
   z-index: 1;
-  background-color: white;
+  background-color: gray;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -117,6 +120,10 @@ body.lock {
   }
 }
 
+.iconLink:hover .icon{
+  background-color: white;
+  transition: 0.3s ease-out;
+}
 
 /*burger menu*/
 
@@ -126,11 +133,28 @@ body.lock {
   top: 20px;
   right: 20px;
   z-index: 1000;
+  cursor: pointer;
   @media screen and (max-width: 769px) {
     display: block;
   }
-
 }
+
+.swatch {
+  content: '';
+  position: absolute;
+  width: 100vh;
+  height: 12vh;
+  left: 0;
+  top: 0;
+  z-index: 5;
+  background-color: #1c1c1c;
+  transition: 1s;
+  opacity: 0;
+}
+.swatchActive {
+  transition: 1s;
+  opacity: 0.98;
+ }
 
 .burger {
   position: relative;

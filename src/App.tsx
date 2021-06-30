@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.scss';
 import {Main} from "./main/Main";
 import {Header} from "./header/Header";
@@ -12,10 +12,20 @@ import {Contact} from './contact/Contact';
 function App() {
 
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const appStyle = mobileMenuOpen ? "App lock" : "App"
+
+    useEffect(() => {
+        if (mobileMenuOpen) {
+            document.body.style.overflow = "hidden"
+        } else {
+            document.body.style.overflow = "visible"
+            window.scrollTo(0,0)
+        }
+    }, [mobileMenuOpen])
+
+
 
     return (
-        <div className={appStyle}>
+        <div className="App">
             <Header mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen}/>
             <AnimatePresence exitBeforeEnter>
                 <Switch>

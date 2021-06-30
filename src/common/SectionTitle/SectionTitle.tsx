@@ -18,8 +18,9 @@ export const SectionTitle = (props: SectionTitleType) => {
                     autoStart: true,
                     loop: true,
                     delay: 140,
-                    skipAddStyles: true,
-                    wrapperClassName: `sectionTitle`
+                    // skipAddStyles: true,
+                    // wrapperClassName: `sectionTitle`,
+                    // cursor: " "
                 }}
                 onInit={(typewriter) => {
                     typewriter.typeString(props.allTitle)

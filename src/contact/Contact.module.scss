@@ -8,9 +8,10 @@
         min-height: 100vh;
         padding: 100px 15px;
         max-width: calc(100% - 200px);
-        //background-color: #c1bfbf;
         margin: 0 auto;
-        //background-color: gray;
+        @media screen and (max-width: 769px) {
+            max-width: 100%;
+        }
         .content {
             display: flex;
             align-items: center;

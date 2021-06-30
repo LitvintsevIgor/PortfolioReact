@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useEffect, useState} from "react";
 import {NavLink} from "react-router-dom";
 import style from "./Header.module.scss"
 import iconHome from './../images/forNavbar/home.svg'
@@ -20,26 +20,42 @@ export const Header = (props: HeaderType) => {
         {icon: iconletter, name: "Contact", path: "/contact", style: style.iconContact},
     ]
 
-    // const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    let swatchStyle = style.swatch;
+    const [offset, setOffset] = useState(0);
+
+    useEffect(() => {
+        window.onscroll = () => {
+            setOffset(window.pageYOffset)
+        }
+    }, []);
+
+    if (offset > 50) {
+        swatchStyle = `${style.swatch} + ${style.swatchActive}`
+    }
 
     return (
         <div className={style.header}>
-            <div className={props.mobileMenuOpen ? `${style.burgerWrapper} + ${style.burgerActive}` : style.burgerWrapper} onClick={ () => props.setMobileMenuOpen(!props.mobileMenuOpen)}>
+            <div className={swatchStyle}>
+
+            </div>
+            <div
+                className={props.mobileMenuOpen ? `${style.burgerWrapper} + ${style.burgerActive}` : style.burgerWrapper}
+                onClick={() => props.setMobileMenuOpen(!props.mobileMenuOpen)}>
                 <div className={props.mobileMenuOpen ? `${style.burger} + ${style.burgerActive}` : style.burger}>
                     <span></span>
                 </div>
             </div>
 
-            <ul className={ props.mobileMenuOpen ? `${style.iconMenu} + ${style.iconMenuActive}` : style.iconMenu}>
+            <ul className={props.mobileMenuOpen ? `${style.iconMenu} + ${style.iconMenuActive}` : style.iconMenu}>
                 {
                     links.map((l) => {
                         return (
-                            <NavLink to={l.path} onClick={ () => props.setMobileMenuOpen(!props.mobileMenuOpen)}>
+                            <NavLink activeClassName={style.activeLink} to={l.path} onClick={() => props.setMobileMenuOpen(!props.mobileMenuOpen)}>
                                 <li className={style.iconBox}>
                                     <a className={style.iconLink} href="#">
                                         <div className={style.buttonText}>{l.name}</div>
                                         <div className={style.icon}>
-                                                <img src={l.icon} alt=""/>
+                                            <img src={l.icon} alt=""/>
                                         </div>
                                     </a>
                                 </li>

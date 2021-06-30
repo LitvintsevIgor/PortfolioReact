@@ -25,51 +25,52 @@ export const pageTransition = {
 export const Main = () => {
     return (
         <motion.div className={style.main} initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
-            <div className={style.title}>
-                <Typewriter
-                    options={{
-                        autoStart: true,
-                        loop: true,
-                        delay: 140,
-                        skipAddStyles: true,
-                        cursor: ''
-                    }}
+            <div className={style.container}>
+                <div className={style.title}>
+                    <Typewriter
+                        options={{
+                            autoStart: true,
+                            loop: true,
+                            delay: 140,
+                            // skipAddStyles: true,
+                        }}
 
-                    onInit={(typewriter) => {
-                        typewriter.typeString(`Hi, I am Igor Litvintsev`)
-                            .callFunction(() => {
-                                console.log('String typed out!');
-                            })
-                            .pauseFor(2500)
-                            .deleteChars(16)
-                            .pauseFor(500)
-                            .typeString(` frontend developer`)
-                            .pauseFor(2500)
-                            .deleteChars(19)
-                            .pauseFor(500)
-                            .typeString(` Igor Litvintsev`)
-                            .pauseFor(2500)
-                            .callFunction(() => {
-                                console.log('All strings were deleted');
-                            })
-                            .start();
-                    }}
-                />
-            </div>
-            <div className={style.socialLinks}>
-                <ul>
-                    {
-                        icons.map( (i) => {
-                            return (
-                                <li>
-                                    <a href={i.link}>
-                                        <img src={i.icon} alt=""/>
-                                    </a>
-                                </li>
-                            )
-                        } )
-                    }
-                </ul>
+                        onInit={(typewriter) => {
+                            typewriter.typeString(`Hi, I am Igor Litvintsev`)
+                                .callFunction(() => {
+                                    console.log('String typed out!');
+                                })
+                                .pauseFor(2500)
+                                .deleteChars(16)
+                                .pauseFor(500)
+                                .typeString(` frontend developer`)
+                                .pauseFor(2500)
+                                .deleteChars(19)
+                                .pauseFor(500)
+                                .typeString(` Igor Litvintsev`)
+                                .pauseFor(2500)
+                                .callFunction(() => {
+                                    console.log('All strings were deleted');
+                                })
+                                .start();
+                        }}
+                    />
+                </div>
+                <div className={style.socialLinks}>
+                    <ul>
+                        {
+                            icons.map( (i) => {
+                                return (
+                                    <li>
+                                        <a href={i.link}>
+                                            <img src={i.icon} alt=""/>
+                                        </a>
+                                    </li>
+                                )
+                            } )
+                        }
+                    </ul>
+                </div>
             </div>
         </motion.div>
     )
