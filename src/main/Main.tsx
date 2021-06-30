@@ -23,8 +23,11 @@ export const pageTransition = {
 }
 
 export const Main = () => {
+
+    let viewport = window.innerHeight
+
     return (
-        <motion.div className={style.main} initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
+        <motion.div className={style.main} style={{height: viewport}} initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
             <div className={style.container}>
                 <div className={style.title}>
                     <Typewriter
