@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/PortfolioReact/static/css/main.d4b0fe63.chunk.css",
+    "main.css": "/PortfolioReact/static/css/main.42cdd3c2.chunk.css",
     "main.js": "/PortfolioReact/static/js/main.19c1dcaa.chunk.js",
     "main.js.map": "/PortfolioReact/static/js/main.19c1dcaa.chunk.js.map",
     "runtime-main.js": "/PortfolioReact/static/js/runtime-main.a03cc801.js",
@@ -12,7 +12,7 @@
     "static/js/3.d1428490.chunk.js.map": "/PortfolioReact/static/js/3.d1428490.chunk.js.map",
     "index.html": "/PortfolioReact/index.html",
     "static/css/2.71a75787.chunk.css.map": "/PortfolioReact/static/css/2.71a75787.chunk.css.map",
-    "static/css/main.d4b0fe63.chunk.css.map": "/PortfolioReact/static/css/main.d4b0fe63.chunk.css.map",
+    "static/css/main.42cdd3c2.chunk.css.map": "/PortfolioReact/static/css/main.42cdd3c2.chunk.css.map",
     "static/js/2.545f9412.chunk.js.LICENSE.txt": "/PortfolioReact/static/js/2.545f9412.chunk.js.LICENSE.txt",
     "static/media/dashboard.9b92f207.svg": "/PortfolioReact/static/media/dashboard.9b92f207.svg",
     "static/media/download.e1e89308.svg": "/PortfolioReact/static/media/download.e1e89308.svg",
@@ -40,7 +40,7 @@
     "static/js/runtime-main.a03cc801.js",
     "static/css/2.71a75787.chunk.css",
     "static/js/2.545f9412.chunk.js",
-    "static/css/main.d4b0fe63.chunk.css",
+    "static/css/main.42cdd3c2.chunk.css",
     "static/js/main.19c1dcaa.chunk.js"
   ]
 }
