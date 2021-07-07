@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/PortfolioReact/static/css/main.45a55477.chunk.css",
-    "main.js": "/PortfolioReact/static/js/main.49e2b9f2.chunk.js",
-    "main.js.map": "/PortfolioReact/static/js/main.49e2b9f2.chunk.js.map",
-    "runtime-main.js": "/PortfolioReact/static/js/runtime-main.a03cc801.js",
-    "runtime-main.js.map": "/PortfolioReact/static/js/runtime-main.a03cc801.js.map",
+    "main.js": "/PortfolioReact/static/js/main.7394f391.chunk.js",
+    "main.js.map": "/PortfolioReact/static/js/main.7394f391.chunk.js.map",
+    "runtime-main.js": "/PortfolioReact/static/js/runtime-main.9a9ef9cd.js",
+    "runtime-main.js.map": "/PortfolioReact/static/js/runtime-main.9a9ef9cd.js.map",
     "static/css/2.71a75787.chunk.css": "/PortfolioReact/static/css/2.71a75787.chunk.css",
-    "static/js/2.545f9412.chunk.js": "/PortfolioReact/static/js/2.545f9412.chunk.js",
-    "static/js/2.545f9412.chunk.js.map": "/PortfolioReact/static/js/2.545f9412.chunk.js.map",
-    "static/js/3.d1428490.chunk.js": "/PortfolioReact/static/js/3.d1428490.chunk.js",
-    "static/js/3.d1428490.chunk.js.map": "/PortfolioReact/static/js/3.d1428490.chunk.js.map",
+    "static/js/2.f41ad254.chunk.js": "/PortfolioReact/static/js/2.f41ad254.chunk.js",
+    "static/js/2.f41ad254.chunk.js.map": "/PortfolioReact/static/js/2.f41ad254.chunk.js.map",
+    "static/js/3.b3b97d72.chunk.js": "/PortfolioReact/static/js/3.b3b97d72.chunk.js",
+    "static/js/3.b3b97d72.chunk.js.map": "/PortfolioReact/static/js/3.b3b97d72.chunk.js.map",
     "index.html": "/PortfolioReact/index.html",
     "static/css/2.71a75787.chunk.css.map": "/PortfolioReact/static/css/2.71a75787.chunk.css.map",
     "static/css/main.45a55477.chunk.css.map": "/PortfolioReact/static/css/main.45a55477.chunk.css.map",
-    "static/js/2.545f9412.chunk.js.LICENSE.txt": "/PortfolioReact/static/js/2.545f9412.chunk.js.LICENSE.txt",
+    "static/js/2.f41ad254.chunk.js.LICENSE.txt": "/PortfolioReact/static/js/2.f41ad254.chunk.js.LICENSE.txt",
     "static/media/dashboard.9b92f207.svg": "/PortfolioReact/static/media/dashboard.9b92f207.svg",
     "static/media/download.e1e89308.svg": "/PortfolioReact/static/media/download.e1e89308.svg",
     "static/media/fbMain.c1f592f7.svg": "/PortfolioReact/static/media/fbMain.c1f592f7.svg",
@@ -38,10 +38,10 @@
     "static/media/vk.e8e9cc26.svg": "/PortfolioReact/static/media/vk.e8e9cc26.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.a03cc801.js",
+    "static/js/runtime-main.9a9ef9cd.js",
     "static/css/2.71a75787.chunk.css",
-    "static/js/2.545f9412.chunk.js",
+    "static/js/2.f41ad254.chunk.js",
     "static/css/main.45a55477.chunk.css",
-    "static/js/main.49e2b9f2.chunk.js"
+    "static/js/main.7394f391.chunk.js"
   ]
 }
