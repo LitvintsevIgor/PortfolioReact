@@ -5,6 +5,9 @@ import download from "./../images/download.svg"
 import {motion} from "framer-motion";
 import {SectionTitle} from "../common/SectionTitle/SectionTitle";
 import {SuperButton} from "../common/SuperButton/SuperButton";
+import { Link } from "react-router-dom";
+// @ts-ignore
+import menu from "../common/menu.pdf";
 
 const info = [
     {point: "First Name:", myData: " Igor"},
@@ -66,7 +69,9 @@ export const About = () => {
                                 }
                             </ul>
                         </div>
-                        <SuperButton text="Download CV" icon={download}/>
+                        <a href={menu} target="_blank" rel="noopener noreferrer" download>
+                            <SuperButton text="Download CV" icon={download}/>
+                        </a>
                     </motion.div>
                     <motion.div className={style.photo} initial="out" exit="out" animate="in"
                                 variants={rightBlockVariants} transition={blockTransition}>

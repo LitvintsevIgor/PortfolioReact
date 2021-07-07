@@ -9,7 +9,7 @@ type SuperButtonPropsType = {
 export const SuperButton: React.FC<SuperButtonPropsType> = ({text, icon}) => {
     return (
         <div className={style.btnWrapper}>
-            <a href="#">
+            <a>
                 <span className={style.buttonText}>{text}</span>
                 <span className={style.icon}>
                     <img src={icon} alt=""/>
