@@ -7,6 +7,7 @@
   background-size: cover;
   color: white;
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: "";
@@ -27,6 +28,7 @@
     max-width: calc(100% - 200px);
     padding: 0 15px;
     margin: 0 auto;
+    overflow: hidden;
     @media screen and (max-width: 769px) {
       max-width: 100%;
     }

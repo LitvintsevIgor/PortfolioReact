@@ -7,6 +7,7 @@ import {Redirect, Route, Switch} from 'react-router-dom';
 import {Portfolio} from "./portfolio/Portfolio";
 import {AnimatePresence} from "framer-motion";
 import {Contact} from './contact/Contact';
+import {Helmet} from "react-helmet";
 
 
 function App() {
@@ -26,6 +27,10 @@ function App() {
 
     return (
         <div className="App">
+            <Helmet>
+                <title>Litvintsev</title>
+                <meta name='viewport' content='initial-scale=1, viewport-fit=cover'/>
+            </Helmet>
             <Header mobileMenuOpen={mobileMenuOpen} setMobileMenuOpen={setMobileMenuOpen}/>
             <AnimatePresence exitBeforeEnter>
                 <Switch>

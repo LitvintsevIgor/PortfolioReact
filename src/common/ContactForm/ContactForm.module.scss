@@ -1,59 +1,185 @@
 .contactForm {
-    max-width: 650px;
-    min-width: 587px;
-    @media screen and (max-width: 650px) {
-        max-width: 100%;
-        min-width: 200px;
+  max-width: 650px;
+  min-width: 587px;
+  @media screen and (max-width: 650px) {
+    max-width: 100%;
+    min-width: 200px;
+  }
+
+  .form {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    .error {
+      color: #ff2d2d;
     }
-    .form {
+    .testInput {
+      background-color: #252525;
+    }
+    .testTextarea {
+      font-family: MontserratLight, serif;
+      color: white;
+    }
+    ::placeholder {
+      color: white;
+      opacity: 0.6;
+    }
+    button {
+      background-color: transparent;
+      color: white;
+      border-radius: 55px;
+      border: 1px solid white;
+      width: 250px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 55px;
+      cursor: pointer;
+      overflow: hidden;
+      position: relative;
+
+      &:hover::after {
+        transform: translateX(0);
+        transition: 0.3s ease-out;
+      }
+
+      &:hover .buttonText {
+        color: #1c1c1c;
+        transition: 0.3s;
+      }
+
+      &::after {
+        position: absolute;
+        margin-left: -10px;
+        z-index: 0;
+        content: " ";
+        width: 250px;
+        height: 55px;
+        background-color: white;
+        transform: translateX(250px);
+        transition: 0.3s ease-out;
+        overflow: hidden;
+      }
+
+      .buttonText {
+        position: relative;
+        font-family: MontserratLight, serif;
+        font-size: 1rem;
+        font-weight: 300;
+        margin-left: 30px;
+        z-index: 1;
+        transition: 0.3s;
+      }
+
+      .icon {
+        position: relative;
+        z-index: 1;
+        background-color: white;
+        width: 55px;
+        height: 55px;
+        border-radius: 55px;
         display: flex;
-        justify-content: flex-start;
-        flex-wrap: wrap;
-        .inputs{
-            display:flex;
-            justify-content: space-between;
-            width: 100%;
-            margin-bottom: 20px;
-            @media screen and (max-width: 650px) {
-                flex-direction: column;
-                margin-bottom: 0;
-            }
-            .myInput {
-                max-width: 30%;
-
-                @media screen and (max-width: 650px) {
-                    max-width: 100%;
-                    margin-bottom: 20px;
-                }
-            }
-            input {
-                display: block;
-                width: 100%;
-                //max-width: 190px;
-                border: none;
-                border-radius: 30px;
-                padding: 11px 26px;
-                font-size: 1rem;
-                background-color: #252525;
-                outline: none;
-            }
-        }
-        .myTextarea {
-            width: 100%;
-            margin-bottom: 20px;
-            textarea {
-                height: 170px;
-                width: 100%;
-                border-radius: 30px;
-                display: block;
-                border: none;
-                padding: 11px 26px;
-                font-family: Montserrat, sans-serif;
-                background-color: #252525;
-                font-size: 1rem;
-                outline: none;
-
-            }
-        }
+        align-items: center;
+        justify-content: center;
+        margin-right: -6px;
+      }
     }
+
+    .inputs {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 20px;
+      @media screen and (max-width: 650px) {
+        flex-direction: column;
+        margin-bottom: 0;
+      }
+
+      .myInput {
+        max-width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @media screen and (max-width: 650px) {
+          max-width: 100%;
+          margin-bottom: 20px;
+        }
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        //max-width: 190px;
+        border: none;
+        border-radius: 30px;
+        padding: 11px 26px;
+        font-size: 1rem;
+        //background-color: #252525;
+        outline: none;
+        color: white;
+        font-family: MontserratLight, serif;
+        ::placeholder {
+          color: white;
+          opacity: 0.6;
+          font-family: MontserratLight, serif;
+        }
+      }
+    }
+    .myTextarea {
+      width: 100%;
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .testTextarea {
+        height: 170px;
+        width: 100%;
+        border-radius: 30px;
+        display: block;
+        border: none;
+        padding: 11px 26px;
+        background-color: #252525;
+        font-size: 1rem;
+        outline: none;
+      }
+    }
+  }
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus
+input:-webkit-autofill,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  color: white;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+//textarea::placeholder {
+//  font-family: Montserrat, sans-serif !important;
+//  color: red;
+//}
+//input, textarea {
+//  font-family: Montserrat, sans-serif;
+//  color: green;
+//}
+//input, textarea::-webkit-input-placeholder {
+//  font-family: Montserrat, sans-serif;
+//  color: green;
+//}
+//input, textarea:-moz-placeholder {
+//  font-family: Montserrat, sans-serif;
+//}
+//input, textarea ::-moz-placeholder {
+//  font-family: Montserrat, sans-serif;
+//}
+//input, textarea:-ms-input-placeholder {
+//  font-family: Montserrat, sans-serif;
+//}

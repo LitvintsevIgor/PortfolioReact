@@ -28,7 +28,7 @@
         background: no-repeat url("./../images/photoAva.jpeg") center;
         background-size: cover;
 
-        @media screen and (max-width: 426px) {
+        @media screen and (max-width: 510px) {
           width: 300px;
           height: 300px;
         }
@@ -57,7 +57,7 @@
             width: 300px;
 
           }
-          @media screen and (max-width: 426px) {
+          @media screen and (max-width: 510px) {
             max-height: 400px;
             width: 300px;
 

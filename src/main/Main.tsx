@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import style from "./Main.module.scss"
 import Typewriter from "typewriter-effect";
 import {motion} from "framer-motion";
@@ -24,10 +24,20 @@ export const pageTransition = {
 
 export const Main = () => {
 
-    let viewport = window.innerHeight
+    const [screenHeight, setScreenHeight] = useState(window.innerHeight)
+    // let viewport = window.innerHeight
+
+    useEffect(() => {
+        const changeScreenOrientation = () => {
+            setScreenHeight(window.innerHeight)
+        }
+        window.addEventListener('resize', changeScreenOrientation)
+
+    }, [screenHeight]);
+
 
     return (
-        <motion.div className={style.main} style={{height: viewport}} initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
+        <motion.div className={style.main} style={{height: screenHeight}} initial="out" exit="out" animate="in" variants={pageVariants} transition={pageTransition}>
             <div className={style.container}>
                 <div className={style.title}>
                     <Typewriter
